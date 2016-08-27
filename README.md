@@ -1,2 +1,2 @@
 # fdeximoveis
-imobiliária chamada FdexImoveis
+imobiliária FdexImoveis
