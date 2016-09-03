@@ -3,8 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Fdeximóveis</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
 </head>
 <body>
@@ -14,37 +15,101 @@
 			<h1 class="logo">fdeximóveis</h1>
 		</div>
 	</div>
-	<div class="row">		
-		<div class="col-xs-12">				
-				<nav class="nav">
-					<ul class="list">
-						<li class="list-item"><a href="#" class="list-item--active">home</a></li>
-						<li class="list-item"><a href="#" class="list-item--active">imóveis</a></li>
-						<li class="list-item"><a href="#" class="list-item--active">contato</a></li>
-						<li class="list-item"><a href="#" class="list-item--active">login</a></li>
-					</ul>
-				</nav>				
+	<div class="row center-xs">		
+		<div class="col-xs-6">
+			<!-- Menu mobile -->
+			<div id="nav-icon2">
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			</div>
+			<!-- Menu mobile -->				
+			<nav class="nav">
+				<ul class="list">
+					<li class="list-item"><a href="#about" class="list-item--active page-scroll">about</a></li>
+					<li class="list-item"><a href="#imoveis" class="list-item--active page-scroll">imóveis</a></li>
+					<li class="list-item"><a href="#contato" class="list-item--active page-scroll">contato</a></li>
+					<li class="list-item"><a href="#login" class="list-item--active page-scroll">login</a></li>
+				</ul>
+			</nav>	
 		</div>
 	</div>
 </header>
-<div class="row">
-	<div class="col-xs-12">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At doloremque reprehenderit consequatur dolorum dolorem culpa voluptatem atque, cum voluptatum consequuntur perspiciatis vel necessitatibus, molestias, odio adipisci obcaecati velit quod numquam.</p>
-	</div>
-</div>
-<footer>
+<section id="about" class="page-section">
 	<div class="row">
-		<div class="col-xs-12">			
-
+		<div class="col-xs-12">
+			<div class="box">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi ea eum, vitae eveniet eaque odio nam maxime facilis qui doloremque, beatae. Consequatur numquam similique fuga neque quisquam deserunt eveniet, dicta! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ad, reiciendis nihil esse voluptates laudantium quidem. Quam dolore harum fugit, quis aperiam delectus esse non officia. Laudantium accusantium omnis esse! </p>
+			</div>
 		</div>
 	</div>
+</section>
+<section id="imoveis" class="page-section">
+	<div id="imovel">
+		<imovel-component></imovel-component>
+	</div>
+</section>
+<section id="contato" class="page-section">
 	<div class="row center-xs">
-    <div class="col-xs-6">
-        <div class="box">
-      		&copy;<span class="copy"></span>
-        </div>
-    </div>
-</div>
+		<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+			<fieldset>
+				<legend>Contato</legend>	
+				<form action="#">			
+						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+							<input type="text" placeholder="Nome">
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+							<input type="email" placeholder="E-mail">
+						</div>			
+						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+							<input type="text" placeholder="Telefone">
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+							<textarea name="msg"  cols="30" rows="10" placeholder="Mensagem"></textarea>
+						</div>
+						<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+							<input type="button" id="submit" value="Enviar">
+						</div>
+				</form>	
+			</fieldset>
+		</div>		
+	</div>
+</section>
+<section id="login" class="page-login">
+	<div class="row center-xs">
+		<div class="login">
+			<fieldset>									
+				<form action="#">			
+					<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+						<input type="text" placeholder="Nome">
+					</div>
+					<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+						<input type="email" placeholder="E-mail">
+					</div>											
+					<div class="col-xs-12 col-sm-3 col-md-2 col-lg-4">
+						<input type="button" id="submit" value="Enviar">
+					</div>
+				</form>	
+			</fieldset>
+		</div>
+	</div>
+</section>
+<footer>
+	<div class="row center-xs">
+	    <div class="col-xs-6">
+	        <div class="box">
+	      		&copy;<span class="copy"></span>
+	        </div>
+	    </div>
+	</div>
 </footer>
+<script src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="js/libs/vue.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/components/imovel.js"></script>
 </body>
 </html>
